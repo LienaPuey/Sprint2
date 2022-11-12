@@ -4,10 +4,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400&family=Rubik&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/css/main.min.css">
     <title>BOOKMARK</title>
 </head>
 <body>
-    <h1>Lienis</h1>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container-xxl">
+            <a href="#intro" class="navbar-brand">
+                <img src="/assets/Imagenes/logo-bookmark.svg" alt="" class="d-inline-block align-text-top">   
+            </a>
+          <!-- toggle for movile nav   -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- links nav -->
+            <div id="main-nav" class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-3">
+                        <a href="#features" class="nav-link active">FEATURES</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#pricing" class="nav-link active">PRICING</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a href="#contact" class="nav-link active">CONTACT</a>
+                    </li>
+                    <li class="nav-item ms-2 d-md-inline">
+                        <a href="#login" class="nav-link btn btn-secondary btn-intro shadow-sm">LOGIN</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <section id="intro">
+        <div class="container-fluid">
+            <div class="row justify-content-between align-items-center">
+                <div class="intro-img col-md-5 order-md-2 gx-5 ms-5">
+                    <img class="intro-img-tab img-fluid shadow-lg" src="/assets/Imagenes/illustration-features-tab-1.svg" alt="tab1">
+                    <img id="forma" src="/assets/Imagenes/Forma.svg" alt="forma" class="img-fluid">
+                </div>
+
+                <div class="col-md-5 text-center text-md-start order-md-1 ms-5">
+                    <h1>
+                        <div class="display-4 fw-bold">A Simple Bookmark Manager</div>
+                    </h1>
+                    <p class="lead my-4 text-muted text-wrap">A clean and simple interface to organize your favourite 
+                        websites. Open a new browser tab and see your sites load 
+                        instantly. Try it for free.</p>
+                    <a href="#" class="btn-intro btn btn-primary btn-lg p-3 me-1">Get it on Chrome</a>
+                    <a href="#" class="btn-intro btn btn-light btn-lg p-3 ms-1">Get it on Firefox</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="mt-5">
+        <div class="container-lg">
+            <div class="text-center">
+                <h1 class="fw-bold">Features</h1>
+                <p class="lead text-muted">Our aim is to make it quick and easy for you to access
+                    your favourite websites. Your bookmarks sync between your devices so you can 
+                    access them on the go.
+                </p>
+            </div>
+                <nav>
+                    <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+                      <a class="nav-item nav-link active" id="nav-bookmark-tab" data-toggle="tab" href="#bookmark" role="tab" aria-controls="nav-bookmark" aria-selected="true">Simple Bookmarking</a>
+                      <a class="nav-item nav-link" id="nav-searching-tab" data-toggle="tab" href="#searching" role="tab" aria-controls="nav-searching" aria-selected="false">Speedy Searching</a>
+                      <a class="nav-item nav-link" id="nav-sharing-tab" data-toggle="tab" href="#sharing" role="tab" aria-controls="nav-sharing" aria-selected="false">Easy Sharing</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="bookmark" role="tabpanel" aria-labelledby="nav-bookmark-tab">
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="img-features">
+                                    <img class="img-features-bookmarking img-fluid shadow-lg" src="/assets/Imagenes/illustration-features-tab-1.svg" alt="tab1">
+                                    <img src="/assets/Imagenes/Forma.svg" alt="forma" class="forma img-fluid">
+                                </div>                               
+                            </div>
+                            <div class="col text-center text-md-start">
+                                <div class="col text-center text-md-start">
+                                    <h1 class="fw-bold">Bookmark in one click</h1>
+                                    <p class="lead text-muted text-wrap mt-3">Organize your bookmarks however you like. Our simple drag-and-drop interface gives
+                                        you complete control over how you manage your favourite sites.
+                                    </p>
+                                    <a href="#" class="btn-intro btn btn-primary btn-lg p-3 mt-3">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="searching" role="tabpanel" aria-labelledby="nav-searching-tab">
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="img-features">
+                                    <img class="img-features-bookmarking img-fluid" src="/assets/Imagenes/illustration-features-tab-2.svg" alt="tab2">
+                                    <img src="/assets/Imagenes/Forma.svg" alt="forma" class="forma img-fluid">
+                                </div>                               
+                            </div>
+                            <div class="col text-center text-md-start">
+                                <h1 class="fw-bold">Intelligent search</h1>
+                                <p class="lead text-muted text-wrap mt-3">Our powerful search feature will help you find saved sites in no time at all.
+                                    no need to trawl through all of your bookmarks.
+                                </p>
+                                <a href="#" class="btn-intro btn btn-primary btn-lg p-3 mt-3">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="sharing" role="tabpanel" aria-labelledby="nav-sharing-tab">
+                        <div class="row pt-5">
+                            <div class="col">
+                                <div class="img-features">
+                                    <img class="img-features-bookmarking img-fluid" src="/assets/Imagenes/illustration-features-tab-3.svg" alt="tab3">
+                                    <img src="/assets/Imagenes/Forma.svg" alt="forma" class="forma img-fluid">
+                                </div>                               
+                            </div>
+                            <div class="col text-center text-md-start">
+                                <h1 class="fw-bold">Share your bookmarks</h1>
+                                <p class="lead text-muted text-wrap mt-3">Easily share your bookmarks and collections with others.
+                                    Create a shareable link that you can send at the click of a button.
+                                </p>
+                                <a href="#" class="btn-intro btn btn-primary btn-lg p-3 mt-3">More Info</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>   
+<!-- JavaScript Bundle with Popper -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
