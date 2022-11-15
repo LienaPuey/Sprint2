@@ -1,6 +1,4 @@
-@import '/node_modules/bootstrap/scss/utilities';
-@import '/node_modules/bootstrap/scss/functions';
-@import '/node_modules/bootstrap/scss/variables';
+
 
 //custom variables
 //colors
@@ -10,27 +8,51 @@ $secondary:#FA5959;
 $rubik: 'Rubik', sans-serif;
 $noto: 'Noto Sans', sans-serif;
 
+//import bootstrap
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
 
+
+//mixins
+@mixin buton-outline ($color){
+    background-color: white;
+        border-color: $color;
+        color: $color;
+        border: 2px solid;
+}
+body {
+    font-family: $rubik !important;
+}
+.btn {
+    font-family: $noto !important;
+}
 //navbar
-.nav-item {
-    font-family: $rubik;
+.nav-link {
     font-size: 15px;
+    color:black;
+    &:hover{
+        color: $secondary !important;
+    }
 }
-#login {
-    padding: 1rem;
+.btn-secondary {
+    font-family: $noto !important;
+    font-size: 13px;
+    font-weight: 600 !important;
+    padding: 0.5rem;
+    width: 6rem;
     color:white;
+    &:hover {
+        @include buton-outline($secondary);
+    }
 }
+
 //section intro
 section {
     padding:6rem;
 }
 h1{
-    font-family: $rubik;
-    font-weight: 400;
+    font-weight: 400 !important;
 }
-p{
-    font-family: $rubik;
-}
+
 .intro-img{
     position: relative;
 
@@ -47,12 +69,25 @@ p{
     position:relative;
     z-index: 1;
     top:7rem;
-    left:9rem;
+    left:11rem;
+    height: 24rem;
+    width: 100%;
 }
 
 .btn-intro {
-    font-family: $noto;
     font-weight: 400;
+}
+.btn-primary {
+    &:hover {
+    @include buton-outline($primary);
+    }
+}
+.btn-light {
+    &:hover {
+       background-color: white;
+       border: 2px solid;
+
+    }
 }
 
 
@@ -75,6 +110,19 @@ p{
     right: 19rem;
 }
 
+.nav-tabs{
+    border-bottom:2px solid $light !important;
+}
+.nav-link{
+    border-top: transparent !important;
+    border-left: transparent !important;
+    border-right: transparent !important;
+    &.active{
+        border-bottom:3px solid $secondary !important;
+        color: $secondary !important;
+    }
+    &:hover, &:focus{
+        color:$secondary;
+    }
+} 
 
-//import bootstrap
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
