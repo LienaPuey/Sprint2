@@ -26,6 +26,10 @@ body {
     font-family: $noto !important;
 }
 //navbar
+.navbar-collapse.show {
+    justify-content: center;
+
+}
 .nav-link {
     font-size: 15px;
     color:black;
@@ -74,6 +78,9 @@ h1{
     width: 100%;
 }
 
+.subtext-intro{
+    width:90%;
+}
 .btn-intro {
     font-weight: 400;
 }
@@ -107,7 +114,9 @@ h1{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
     top:6rem;
-    right: 19rem;
+    right: 16rem;
+    height: 24rem;
+    width: 100%;
 }
 
 .nav-tabs{
@@ -125,4 +134,9 @@ h1{
         color:$secondary;
     }
 } 
-
+.subtext-features {
+    width:70%
+}
+.subtext-title {
+    // width:30%;
+}
