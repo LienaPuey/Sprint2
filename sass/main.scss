@@ -4,6 +4,7 @@
 //colors
 $primary:#5265E1;
 $secondary:#FA5959;
+$menu: #2f354f;
 //fonts
 $rubik: 'Rubik', sans-serif;
 $noto: 'Noto Sans', sans-serif;
@@ -15,9 +16,9 @@ $noto: 'Noto Sans', sans-serif;
 //mixins
 @mixin buton-outline ($color){
     background-color: white;
-        border-color: $color;
-        color: $color;
-        border: 2px solid;
+    border-color: $color;
+    color: $color;
+    border: 2px solid;
 }
 body {
     font-family: $rubik !important;
@@ -41,11 +42,120 @@ body {
     font-family: $noto !important;
     font-size: 13px;
     font-weight: 600 !important;
-    padding: 0.5rem;
-    width: 6rem;
     color:white;
     &:hover {
         @include buton-outline($secondary);
+    }
+}
+.navbar-toggler {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+
+    &:focus, &:active, &-icon:focus {
+        outline: none;
+        box-shadow: none;
+        border: 0;
+    }
+    span {
+        margin: 0;
+        padding: 0;
+    }
+    .top-bar {
+        margin-top: 0px;
+        transform: rotate(135deg);
+    }
+    .middle-bar {
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .bottom-bar {
+        margin-top: 0px;
+        transform: rotate(-135deg);
+    }
+    &.collapsed {
+        .top-bar {
+            margin-top: -20px;
+            transform: rotate(0deg);
+        }
+        .middle-bar {
+            opacity: 1;
+            filter: alpha(opacity=100);
+        }
+        .bottom-bar {
+            margin-top: 20px;
+            transform: rotate(0deg);
+        }
+    }
+}
+.toggler-icon {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background:rgb(0, 0, 0);
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+}
+
+.middle-bar {
+    margin-top: 0px;
+}
+
+.navbar-collapse {
+    &.show {
+        background-color: rgba($menu, .9);
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top:0;
+        right: 0;
+        z-index: 3;
+
+        .toggler-icon {
+            position: fixed;
+            top: 6rem;
+            right: 6rem;
+            z-index: 5;
+        }
+        .navbar-nav {
+            width: 100%;
+            position:absolute;
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .nav-item{
+            width:90%;
+            color: white;
+            font-size: 22px;
+            padding: 0.5rem;
+            border-top: 0.5px solid;
+
+        }
+        .nav-link {
+            color: white;
+            
+            &:hover {
+                color: rgb(207, 206, 206) !important;
+            }
+        }
+        .btn-intro {
+            margin-top: 10px;
+            background-color: $menu;
+            border-color: white;
+            color: white;
+            border: 2px solid;
+            width: 100%;
+            
+            &:hover {
+                background-color: white;
+                color: $menu;
+
+            }
+        }
+
     }
 }
 
@@ -80,9 +190,6 @@ h1{
 
 .subtext-intro{
     width:90%;
-}
-.btn-intro {
-    font-weight: 400;
 }
 .btn-primary {
     &:hover {
@@ -135,7 +242,7 @@ h1{
     }
 } 
 .subtext-features {
-    width:70%
+    width:90%
 }
 .subtext-title {
     // width:30%;
