@@ -126,7 +126,7 @@ body {
 
         .navbar-nav {
             width: 100%;
-            position:fixed;
+            position:relative;
             top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -180,17 +180,13 @@ h1{
     &-tab {
         position:absolute;
         z-index: 2;
-        background: linear-gradient(rgb(97, 97, 97), rgb(0, 0, 0)) padding-box,
-        linear-gradient(to right, rgb(97, 97, 97), rgb(0, 0, 0)) border-box;
-        border-radius: 2rem;
-        border: 0.8rem solid transparent;
     }
 }
 #forma {
     position:relative;
     z-index: 1;
-    top:7rem;
-    left:11rem;
+    top:6rem;
+    left:7rem;
     height: 24rem;
     width: 100%;
 }
