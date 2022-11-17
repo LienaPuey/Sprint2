@@ -20,6 +20,11 @@ $noto: 'Noto Sans', sans-serif;
     color: $color;
     border: 2px solid;
 }
+
+@mixin toggle-menu-color ($dark-color:true){
+
+}
+
 body {
     font-family: $rubik !important;
 }
@@ -27,9 +32,9 @@ body {
     font-family: $noto !important;
 }
 //navbar
-.navbar-collapse.show {
-    justify-content: center;
-
+.navbar-brand{
+    z-index: 5;
+    fill:white;
 }
 .nav-link {
     font-size: 15px;
@@ -37,6 +42,10 @@ body {
     &:hover{
         color: $secondary !important;
     }
+}
+.social-media {
+    // visibility: hidden;
+    filter:invert;
 }
 .btn-secondary {
     font-family: $noto !important;
@@ -97,6 +106,8 @@ body {
     opacity: 1;
     left: 0;
     transform: rotate(0deg);
+    z-index: 5;
+
 }
 
 .middle-bar {
@@ -106,23 +117,17 @@ body {
 .navbar-collapse {
     &.show {
         background-color: rgba($menu, .9);
-        height: 100vh;
+        height: 100%;
         width: 100%;
         position: fixed;
         top:0;
         right: 0;
         z-index: 3;
 
-        .toggler-icon {
-            position: fixed;
-            top: 6rem;
-            right: 6rem;
-            z-index: 5;
-        }
         .navbar-nav {
             width: 100%;
-            position:absolute;
-            top: 25%;
+            position:fixed;
+            top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
         }
@@ -132,7 +137,6 @@ body {
             font-size: 22px;
             padding: 0.5rem;
             border-top: 0.5px solid;
-
         }
         .nav-link {
             color: white;
@@ -140,6 +144,9 @@ body {
             &:hover {
                 color: rgb(207, 206, 206) !important;
             }
+        }
+        .social-media {
+            border: 0;
         }
         .btn-intro {
             margin-top: 10px;
