@@ -5,6 +5,7 @@
 $primary:#5265E1;
 $secondary:#FA5959;
 $menu: #2f354f;
+$dark: #242A45;
 //fonts
 $rubik: 'Rubik', sans-serif;
 $noto: 'Noto Sans', sans-serif;
@@ -126,10 +127,8 @@ body {
 
         .navbar-nav {
             width: 100%;
-            position:relative;
-            top: 30%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position:fixed;
+            margin-top: 3.5rem;
         }
         .nav-item{
             width:90%;
@@ -185,8 +184,8 @@ h1{
 #forma {
     position:relative;
     z-index: 1;
-    top:6rem;
-    left:7rem;
+    top:1rem;
+    left:6rem;
     height: 24rem;
     width: 100%;
 }
@@ -223,8 +222,8 @@ h1{
     z-index: 1;
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
-    top:6rem;
-    right: 16rem;
+    top: 2rem;
+    right: 8rem;
     height: 24rem;
     width: 100%;
 }
@@ -247,6 +246,127 @@ h1{
 .subtext-features {
     width:90%
 }
-.subtext-title {
-    // width:30%;
+
+
+//faqs section
+.accordion-button::after {
+	background-image: url("/assets/Imagenes/icon-arrow.svg");
+}
+.accordion-button:not(.collapsed)::after {
+	background-image: url("/assets/Imagenes/icon-arrow.svg");
+}
+
+//footer
+.list-inline-item {
+    font-size: 12px;
+    &:hover {
+        color: $secondary;
+    }
+}
+.icon-footer:hover{
+    fill: $secondary;
+}
+
+
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+    //footer
+    .list-inline-item {
+        font-size: 15px;
+    }
+
+
+//intro
+    #forma {
+        top:6rem;
+        left:7rem;
+    }
+
+//features
+    .forma {
+        top: 4rem;
+        right: 11rem;
+    }
+
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+
+//intro
+    #forma {
+        top: 2rem;
+        left: 4rem;
+    }
+
+    .intro-img-tab{
+        top: 4rem;
+        right: 1rem;
+    }
+
+    //features
+    .forma {
+        top: 2rem;
+        right: 7rem;
+    }
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+
+//intro
+    #forma {
+        top: 6rem;
+        left: 7rem;
+    }
+
+        //features
+    .forma {
+        top: 5rem;
+        right: 7rem;
+    }
+
+    .dwl-cards:nth-child(2){
+        margin-top:5rem;
+    }
+    .dwl-cards:nth-child(3){
+        margin-top:10rem;
+    }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+    //intro
+    #intro {
+        height: 35rem;
+    }
+    #forma {
+        top: 6rem;
+        left: 7rem;
+    }
+
+        //features
+    .forma {
+        top: 2rem;
+        right: 8rem;
+    }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+
+    //intro
+    #forma {
+        top: 8rem;
+        left: 13rem;
+    }
+
+        //features
+    .forma {
+        top: 2rem;
+        right: 8rem;
+    }
 }
