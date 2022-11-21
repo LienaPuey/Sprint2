@@ -22,9 +22,6 @@ $noto: 'Noto Sans', sans-serif;
     border: 2px solid;
 }
 
-@mixin toggle-menu-color ($dark-color:true){
-
-}
 
 body {
     font-family: $rubik !important;
@@ -115,55 +112,6 @@ body {
     margin-top: 0px;
 }
 
-.navbar-collapse {
-    &.show {
-        background-color: rgba($menu, .9);
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        top:0;
-        right: 0;
-        z-index: 3;
-
-        .navbar-nav {
-            width: 100%;
-            position:fixed;
-            margin-top: 3.5rem;
-        }
-        .nav-item{
-            width:90%;
-            color: white;
-            font-size: 22px;
-            padding: 0.5rem;
-            border-top: 0.5px solid;
-        }
-        .nav-link {
-            color: white;
-            
-            &:hover {
-                color: rgb(207, 206, 206) !important;
-            }
-        }
-        .social-media {
-            border: 0;
-        }
-        .btn-intro {
-            margin-top: 10px;
-            background-color: $menu;
-            border-color: white;
-            color: white;
-            border: 2px solid;
-            width: 100%;
-            
-            &:hover {
-                background-color: white;
-                color: $menu;
-
-            }
-        }
-
-    }
-}
 
 //section intro
 section {
@@ -252,13 +200,23 @@ h1{
 .accordion-button::after {
 	background-image: url("/assets/Imagenes/icon-arrow.svg");
 }
+.accordion-button:not(.collapsed){
+    background-color: transparent;
+    color:$secondary;
+}
 .accordion-button:not(.collapsed)::after {
 	background-image: url("/assets/Imagenes/icon-arrow.svg");
 }
 
+.accordion-button:hover {
+    color:$secondary;
+}
+.accordion-button:focus {
+    border-color:transparent;
+}
 //footer
 .list-inline-item {
-    font-size: 12px;
+    font-size: 15px;
     &:hover {
         color: $secondary;
     }
@@ -267,18 +225,114 @@ h1{
     fill: $secondary;
 }
 
-
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
-
+@media (max-width:576px) {
+        //navbar
+        .navbar-collapse {
+            &.show {
+                background-color: rgba($menu, .9);
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                top:0;
+                right: 0;
+                z-index: 3;
+        
+                .navbar-nav {
+                    width: 100%;
+                    position:fixed;
+                    margin-top: 3.5rem;
+                }
+                .nav-item{
+                    width:90%;
+                    color: white;
+                    font-size: 22px;
+                    padding: 0.5rem;
+                    border-top: 0.5px solid;
+                }
+                .nav-link {
+                    color: white;
+                    
+                    &:hover {
+                        color: rgb(207, 206, 206) !important;
+                    }
+                }
+                .social-media {
+                    border: 0;
+                }
+                .btn-intro {
+                    margin-top: 10px;
+                    background-color: $menu;
+                    border-color: white;
+                    color: white;
+                    border: 2px solid;
+                    width: 100%;
+                    
+                    &:hover {
+                        background-color: white;
+                        color: $menu;
+        
+                    }
+                }
+        
+            }
+        }
+    
+}
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { 
-    //footer
-    .list-inline-item {
-        font-size: 15px;
+@media (min-width: 576px) and (max-width:768px) { 
+//navbar
+.navbar-collapse {
+    &.show {
+        background-color: rgba($menu, .9);
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top:0;
+        right: 0;
+        z-index: 3;
+
+        .navbar-nav {
+            width: 100%;
+            position:fixed;
+            margin-top: 3.5rem;
+        }
+        .nav-item{
+            width:90%;
+            color: white;
+            font-size: 22px;
+            padding: 0.5rem;
+            border-top: 0.5px solid;
+        }
+        .nav-link {
+            color: white;
+            
+            &:hover {
+                color: rgb(207, 206, 206) !important;
+            }
+        }
+        .social-media {
+            border: 0;
+            margin-top: 3rem;
+        }
+        .btn-intro {
+            margin-top: 10px;
+            background-color: $menu;
+            border-color: white;
+            color: white;
+            border: 2px solid;
+            width: 100%;
+            
+            &:hover {
+                background-color: white;
+                color: $menu;
+
+            }
+        }
+
     }
-
-
+}
 //intro
     #forma {
         top:6rem;
@@ -291,6 +345,10 @@ h1{
         right: 11rem;
     }
 
+    //footer
+    .list-inline-item {
+        font-size: 13px;
+    }
  }
 
 // Medium devices (tablets, 768px and up)
@@ -367,6 +425,6 @@ h1{
         //features
     .forma {
         top: 2rem;
-        right: 8rem;
+        right: 16rem;
     }
 }
